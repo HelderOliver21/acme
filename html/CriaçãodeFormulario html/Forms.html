@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de transporte</title>
+    
+</head>
+
+<body style="background-color: blueviolet;">
+    <header>
+        <h1>Formulario de Transporte</h1>
+    </header>
+    <article>
+        <!--Inicio do Formulário com tag <form-->
+        <!--Atributos action refere-se ao destino do formulario-->
+        <form action="mailto:helderoliver21@gmail.com"
+        method="post" id="fcontado"
+        oninput="result.value=parseInt(valor_01.value)">
+              
+            <fieldset>
+                <legend><strong>Identificação:</strong></legend>
+                <br>
+                <!--Label é o rótulo do input-->
+                <label for="cNome">Nome:</label>
+                <!--label campo para digitação do usuario-->
+                <input type="text" size="50" name="tNome" id="cNome"  required placeholder="Digite seu Nome"/>
+                <br /><br />
+                <p>Você mora:</p>
+                <!--Input para selecionar dentre as opções-->
+                <input type="radio" name="tipo" id="cid" value="C" />
+                <label for="cid">Cidade</label><br />
+                <input type="radio" name="tipo" id="inter" value="I" />
+                <label for="inter">Interior</label><br />
+            </fieldset>
+            <br /><br />
+            
+            <fieldset>
+                <legend><strong>Informações extras:</strong></legend>
+                <br>
+                <p>Qual meio de transporte você usa</p>
+                <input type="checkbox" id="transporte1" name="transporte1" value="bi
+    ke"  />
+                <label for="transporte1"> Bicicleta</label><br  />
+                <input type="checkbox" id="transporte2" name="transporte2" value="ca
+    r"   />          
+                <label for="transporte2"> Carro</label><br  />
+                <input type="checkbox" id="transporte3" name="transporte3" value="Me
+    tro"   />
+                <label for="transporte3"> Metrô</label><br  />
+                <input type="checkbox" id="transporte4" name="transporte4" value="Bu
+    s"   />
+                <label for="transporte4"> Ônibus</label> <br /><br />
+                <label for="time">Selecionar seu time:</label>
+                <select id="time" name="time">
+                    <option value="sport">Sport</option>
+                    <option value="fortaleza">Fortaleza</option>
+                    <option value="nautico">Nautico</option>
+                    <option value="santa cruz">Santa Cruz</option>
+                    <option value="ceara">Ceara</option>
+                    <option value="bahia">Bahia</option>
+                </select><br /><br />
+                <label for="cCid">Escolha a sua Cidade na lista:</label><br>
+                <input autocomplete="on" list="cidade" name="tCid" id="cCid" placeholder="Sua Cidade" />
+                <datalist id="cidade">
+                <option value="Recife"></option>
+                <option value="Salvador"></option>
+                <option value="Bahia"></option>
+                <option value="Fortaleza"></option>
+                <option value="Sergipe"></option>
+                <option value="Rio Grande do Norte"></option>
+                </datalist>
+            </fieldset>
+            <br /><br />
+            <fieldset>
+                <legend><strong>Idade:</strong></legend>
+                0
+                <input type="range" id="valor_01" name="valor_01" />
+                100 +
+                <input type="number" name="valor_02" id="valor_02" value="50">
+                =
+                <output name="result" for="valor_01 valor_02"></output>
+            </fieldset>
+                <br /><br />
+                <fieldset>
+                <legend><strong>Por favor de seu feedback</strong></legend>
+                <p>Sugestões, elogios e críticas:</p>
+                <textarea name="massage" rows="10" cols="50" placeholder="Deixe aqui sua mensagem!" 
+                required></textarea>
+            </fieldset>
+            
+            <br /><br />
+
+
+            <!--Input gera botão e vale para definir seu nome-->
+            <input type="submit" value="Enviar"  />
+        </form>
+    </article>
+    <br><br><hr>
+    <footer>
+        <small><strong>Instituto da Oportunidade Social</strong></small>
+    </footer>
+     
+   <strong>By Helder Oliveira &copy;</strong>
+</body>
+
+</html>
+    
